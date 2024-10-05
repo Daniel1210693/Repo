@@ -231,17 +231,32 @@ O Git é um sistema de controlo de versões distribuído, criado por Linus Torva
 
 ## Vantagens:
 
-•	**Distribuído**: Cada programador tem uma cópia completa do histórico, permitindo que trabalhem offline e façam commits localmente. <br>
-•	**Velocidade**: As operações locais (commits, branches, merges) são extremamente rápidas. <br>
-•	**Branching poderoso**: Facilita a criação e fusão de branches, promovendo fluxos de trabalho como Git Flow e GitHub Flow. <br>
-•	**Popularidade**: O Git é amplamente utilizado e tem uma grande comunidade de suporte, além de ferramentas populares como GitHub, GitLab e Bitbucket. <br>
-•	**Flexibilidade**: Oferece controlo granular sobre o histórico de commits e permite reescrevê-lo (rebase, amend).
+•	**Distribuído:** Cada programador tem uma cópia completa do histórico, permitindo que trabalhem offline e façam commits localmente. <br>
+•	**Velocidade:** As operações locais (commits, branches, merges) são extremamente rápidas. <br>
+•	**Branching poderoso:** Facilita a criação e fusão de branches, promovendo fluxos de trabalho como Git Flow e GitHub Flow. <br>
+•	**Popularidade:** O Git é amplamente utilizado e tem uma grande comunidade de suporte, além de ferramentas populares como GitHub, GitLab e Bitbucket. <br>
+•	**Flexibilidade:** Oferece controlo granular sobre o histórico de commits e permite reescrevê-lo (rebase, amend).
 
 ## Desvantagens:
 
-•	**Curva de aprendizagem**: O Git pode ser confuso para iniciantes, devido à sua complexidade e às muitas opções de comandos. <br>
-•	**Histórico reescrevível**: A possibilidade de reescrever o histórico pode ser perigosa se usada incorretamente, causando perda de dados. <br>
-•	**Gestão de ficheiros grandes**: Embora existam ferramentas como o Git LFS (Large File Storage), o Git não é ideal para lidar com ficheiros muito grandes.
+•	**Curva de aprendizagem:** O Git pode ser confuso para iniciantes, devido à sua complexidade e às muitas opções de comandos. <br>
+•	**Histórico reescrevível:** A possibilidade de reescrever o histórico pode ser perigosa se usada incorretamente, causando perda de dados. <br>
+•	**Gestão de ficheiros grandes:** Embora existam ferramentas como o Git LFS (Large File Storage), o Git não é ideal para lidar com ficheiros muito grandes.
 
+## Subversion (SVN) <br><br> Descrição:
+
+Subversion, também conhecido como SVN, é um sistema de controlo de versões centralizado, criado em 2000 como sucessor do CVS. Utiliza um servidor central para armazenar o repositório, e os programadores fazem checkouts de cópias locais dos ficheiros para trabalhar.
+
+## Vantagens:
+•	**Simplicidade:** O SVN tem uma curva de aprendizagem mais suave, sendo mais fácil para principiantes. <br>
+•	**Controlo centralizado:** O modelo centralizado pode ser mais simples para equipas que preferem um único ponto de referência e controlo sobre o código. <br>
+•	**Histórico linear:** O histórico no SVN é sempre linear, sem a complexidade de branches distribuídas. <br>
+•	**Bom suporte para ficheiros grandes:** O SVN lida melhor com ficheiros grandes e binários, já que estes não precisam de ser descarregados completamente em cada atualização.
+
+## Desvantagens:
+
+•	**Centralizado:** Os programadores dependem de um servidor central para a maioria das operações, o que pode ser problemático em caso de falta de ligação à internet. <br>
+•	**Desempenho:** As operações de rede são mais lentas em comparação com sistemas distribuídos, pois requerem comunicação constante com o servidor. <br>
+•	**Branching mais complexo:** Embora seja possível criar branches, o processo é mais lento e menos intuitivo do que no Git ou Mercurial.
 
 
