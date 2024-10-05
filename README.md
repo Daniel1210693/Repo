@@ -113,3 +113,24 @@ Neste ponto podemos ver os diferentes tipos de log e os seus outputs.
     git log --graph
     
 ![Imagem4](img/Imagem4.png)
+
+    git log –pretty=format:”%h - %an <%ae> %ad : %s”
+    
+![Imagem5](img/Imagem5.png)
+
+## 8º Passo – Revert
+
+Neste passo, objetivo é voltar atrás um commit já feito criando assim um revert.
+
+    git commit -m "Revert Test"
+    git revert 2efbc828acd05996363bf7fca8b75cfbddc01d7c
+
+O comando git revert 2efbc828acd05996363bf7fca8b75cfbddc01d7c reverte as alterações feitas no commit especificado pelo hash 2efbc828acd05996363bf7fca8b75cfbddc01d7c.
+    
+    git revert d38b0149c7b5c308630141427abd5bd141de5190 -m "Wrong Revert 1"
+    git revert 1d4e5f318f9a44f97714893e400cc942c3c650f8
+
+### Nota: Neste ponto executamos o comando revert mais vezes do que as necessárias, pois executamos incorretamente o comando, criando um revert que não era o nosso desejado, para corrigir o problema, fizemos outra sequencia de revert, a primeira para voltar ao ponto inicial e a segunda para irmos para o ponto desejado.
+
+
+
