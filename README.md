@@ -225,24 +225,24 @@ Este comando elimina todos os ficheiros do tipo .Identifier.
 
 # Alternativas
 
-##Git
+## Git
 
-##Descrição:
+## Descrição:
 
 O Git é um sistema de controlo de versões distribuído, criado por Linus Torvalds em 2005. Permite que cada programador tenha uma cópia completa do repositório no seu sistema local, incluindo todo o histórico de revisões. O Git destaca-se pela sua eficiência em termos de velocidade e flexibilidade, especialmente em projetos de grande escala.
 
 ## Vantagens:
 
-•	**Distribuído**: Cada programador tem uma cópia completa do histórico, permitindo que trabalhem offline e façam commits localmente.
-•	**Velocidade**: As operações locais (commits, branches, merges) são extremamente rápidas.
-•	**Branching poderoso**: Facilita a criação e fusão de branches, promovendo fluxos de trabalho como Git Flow e GitHub Flow.
-•	**Popularidade**: O Git é amplamente utilizado e tem uma grande comunidade de suporte, além de ferramentas populares como GitHub, GitLab e Bitbucket.
+•	**Distribuído**: Cada programador tem uma cópia completa do histórico, permitindo que trabalhem offline e façam commits localmente. <br>
+•	**Velocidade**: As operações locais (commits, branches, merges) são extremamente rápidas. <br>
+•	**Branching poderoso**: Facilita a criação e fusão de branches, promovendo fluxos de trabalho como Git Flow e GitHub Flow. <br>
+•	**Popularidade**: O Git é amplamente utilizado e tem uma grande comunidade de suporte, além de ferramentas populares como GitHub, GitLab e Bitbucket. <br>
 •	**Flexibilidade**: Oferece controlo granular sobre o histórico de commits e permite reescrevê-lo (rebase, amend).
 
-##Desvantagens:
+## Desvantagens:
 
-•	**Curva de aprendizagem**: O Git pode ser confuso para iniciantes, devido à sua complexidade e às muitas opções de comandos.
-•	**Histórico reescrevível**: A possibilidade de reescrever o histórico pode ser perigosa se usada incorretamente, causando perda de dados.
+•	**Curva de aprendizagem**: O Git pode ser confuso para iniciantes, devido à sua complexidade e às muitas opções de comandos. <br>
+•	**Histórico reescrevível**: A possibilidade de reescrever o histórico pode ser perigosa se usada incorretamente, causando perda de dados. <br>
 •	**Gestão de ficheiros grandes**: Embora existam ferramentas como o Git LFS (Large File Storage), o Git não é ideal para lidar com ficheiros muito grandes.
 
 
