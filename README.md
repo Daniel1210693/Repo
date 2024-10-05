@@ -84,4 +84,8 @@ Este comando envia a tag 1.1.0 para o repositório remoto (GitHub). Assim, a tag
 
 Este comando faz o download de todas as tags do repositório remoto para o repositório local. Garante que todas as tags remotas sejam atualizadas e disponíveis localmente.
 
+## 4º Passo – Criação da Nova Feature (jobYears)
 
+Ao longo deste ponto o objetivo é desenvolver a feature jobYears, para isso, deve ser adicionado um novo campo para registar os anos de serviço do empregado na empresa (por exemplo, jobYears). O suporte para este novo campo deve ser implementado, garantindo que apenas valores inteiros são permitidos. Além disso, devem ser criados testes unitários para validar a criação de empregados e verificar os seus atributos, assegurando que não há valores nulos ou vazios. Após a conclusão e testagem da nova funcionalidade, o código deve ser comprometido e enviado, seguido da criação de uma nova tag (ex.: v1.2.0).
+
+(img/imagem1.png)
