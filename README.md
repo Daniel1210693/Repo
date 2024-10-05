@@ -225,7 +225,7 @@ Este comando elimina todos os ficheiros do tipo .Identifier.
 
 # Alternativas
 
-## Git <br> Descrição:
+## Git <br><br> Descrição:
 
 O Git é um sistema de controlo de versões distribuído, criado por Linus Torvalds em 2005. Permite que cada programador tenha uma cópia completa do repositório no seu sistema local, incluindo todo o histórico de revisões. O Git destaca-se pela sua eficiência em termos de velocidade e flexibilidade, especialmente em projetos de grande escala.
 
