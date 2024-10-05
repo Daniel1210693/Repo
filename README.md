@@ -88,4 +88,28 @@ Este comando faz o download de todas as tags do repositório remoto para o repos
 
 Ao longo deste ponto o objetivo é desenvolver a feature jobYears, para isso, deve ser adicionado um novo campo para registar os anos de serviço do empregado na empresa (por exemplo, jobYears). O suporte para este novo campo deve ser implementado, garantindo que apenas valores inteiros são permitidos. Além disso, devem ser criados testes unitários para validar a criação de empregados e verificar os seus atributos, assegurando que não há valores nulos ou vazios. Após a conclusão e testagem da nova funcionalidade, o código deve ser comprometido e enviado, seguido da criação de uma nova tag (ex.: v1.2.0).
 
-![Teste](img/Imagem1.png)
+![Imagem1](img/Imagem1.png)
+
+Excerto do código utilizado para o desenvolvimento da feature.
+
+![Imagem2](img/Imagem2.png)
+
+Excerto do código dos testes unitários.
+
+    git commit -m “1st Commit”
+    git push -u origin main
+    git tag -a 1.2.0 -m "Versão 1.2.0. - Parte 1"
+
+Commit e implementação da Tag 1.2.0
+
+## 7º Passo – Git Log
+
+Neste ponto podemos ver os diferentes tipos de log e os seus outputs.
+    
+    git log –oneline
+
+![Imagem3](img/Imagem3.png)
+
+    git log --graph
+    
+![Imagem4](img/Imagem4.png)
