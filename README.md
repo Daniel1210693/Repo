@@ -196,6 +196,13 @@ Testes unitários para validação do email
     
 Comandos finais para fazer o último commit e criação da tag 1.3.1
 
+## 11º Passo - Readme
+
+Por fim o último passo foi o desenvolvimento do readme onde consta o tutorial com o passo a passo para o desenvolvimento do projeto e adição da tag final de conclusão do mesmo.
+
+    git tag ca1-part2 -m "End of CA1 Part 2"
+    git push origin ca1-part2
+
 # Outros comandos
 
 Neste tópico abordamos outros comandos que utilizamos para a resolução do nosso projeto 
