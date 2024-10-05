@@ -1,8 +1,8 @@
 # Repo
 
 ## Estudantes:
-Daniel Oliveira (1210693)
-Fábio Monteiro (1231423)
+Daniel Oliveira (1210693) <br>
+Fábio Monteiro (1231423) <br>
 Rúben Rodrigues (1240490)
 
 ## Disciplina:
