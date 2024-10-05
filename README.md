@@ -148,11 +148,30 @@ Verificar os ficheiros modificados e adicioná-los ao commit
 Este comando é utilizado para criar, listar ou eliminar branches no Git. No caso deste comando específico, é usado para criar uma nova branch.
 
     git commit -m 'Parte 2 - Branch Email-Field'
-#
     git push --set-upstream origin email-field
 
 Este comando envia a branch local email-field para o repositório remoto (GitHub), criando a branch também no GitHub, e define a branch remota origin/email-field como o "upstream" para a branch local. Isso significa que, no futuro, qualquer git push ou git pull na branch email-field será automaticamente associado a essa branch remota.
-git checkout main
+
+    git checkout main
+
 Este comando muda para a branch main no repositório local. Isso permite preparar a branch principal para fundir as alterações da branch email-field.
-git merge email-field
+
+    git merge email-field
+
+Este comando combina as alterações feitas na branch email-field com a branch atual (que neste caso é a main). Isso integra todas as alterações desenvolvidas na branch email-field à branch principal, permitindo que as novas funcionalidades ou correções sejam incorporadas ao projeto principal.
+    
+    git push
+    git tag 1.3.0
+    git push origin 1.3.0
+
+![Imagem7](img/Imagem7.png)
+
+Excerto de código utilizado para o desenvolvimento do email
+
+## 10º Passo – Validações para o email
+
+Neste ponto, deve ser adicionada a funcionalidade de um campo de email para os empregados, juntamente com a criação de testes unitários para validar a criação de empregados e a verificação dos seus atributos (por exemplo, garantir que não há valores nulos ou vazios). Após a conclusão e testagem da nova funcionalidade, o código deve ser comprometido e integrado na branch principal, seguido da criação de uma nova tag (ex.: v1.3.0).
+
+![Imagem8](img/Imagem8.png)
+![image](https://github.com/user-attachments/assets/0e7afdd5-06eb-4539-8e95-f51cc0ca2e76)
 
