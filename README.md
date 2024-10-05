@@ -31,3 +31,57 @@ Este comando grava as mudanças registadas na "staging area" com uma mensagem de
     git branch -M main
 
 Muda o nome da branch atual (que, por defeito, pode ser master) para main, estabelecendo-a como a branch principal do repositório.
+
+    git push -u origin main
+
+Envia as mudanças locais (o commit feito anteriormente) para o repositório remoto (no GitHub), especificando a branch main como a branch para envio padrão no futuro.
+
+## 2º Passo – Criar a Pasta CA1
+
+Após se concluir o primeiro passo, o segundo objetivo é criar uma pasta (CA1) onde irá ser copiado e armazenado uma versão do projeto Building REST
+
+    cd /caminho/para/o/repositório/local
+
+Navega até o diretório local onde o repositório Git está armazenado. Este é o local onde a nova pasta CA1 será criada.
+
+    mkdir CA1
+
+Cria uma nova pasta chamada CA1 dentro do repositório local. Esta pasta será usada para organizar os ficheiros relacionados ao primeiro trabalho da disciplina.
+
+    cp /caminho/de/origem/* /caminho/de/destino/CA1
+
+Copia todos os ficheiros da origem especificada para a nova pasta CA1.
+    
+    git status
+
+Exibe o estado atual do repositório, mostrando quais ficheiros foram modificados ou adicionados e estão prontos para levarem commit, ou se há ficheiros não rastreados.
+
+    git add . 
+
+Adiciona todos os ficheiros e alterações na pasta atual (neste caso, incluindo a nova pasta CA1 e os ficheiros dentro dela) à "staging area", preparando-os para o commit.
+
+    git commit -m "Pasta CA1"
+
+Grava um snapshot do estado atual dos ficheiros adicionados, com uma mensagem de commit descrevendo as alterações feitas. Aqui, a mensagem indica que a pasta CA1 foi criada e adicionada.
+    
+    git push -u origin main
+
+Envia as alterações locais para o repositório remoto (GitHub), na branch main. O parâmetro -u define origin/main como o destino padrão para futuros git push, facilitando o envio de futuras alterações.
+
+## 3º Passo - Criar Tag
+
+Neste passo, o objetivo é desenvolver uma tag para marcar a primeira versão do projeto
+
+    git tag 1.1.0
+
+Este comando cria uma nova tag chamada 1.1.0 no repositório local. As tags são usadas para marcar versões específicas de um projeto, servindo como referências importantes. Neste caso, a tag 1.1.0 indica que esta versão é a primeira grande versão.
+
+    git push origin 1.1.0
+
+Este comando envia a tag 1.1.0 para o repositório remoto (GitHub). Assim, a tag criada localmente será também visível e acessível para qualquer pessoa que tenha acesso ao repositório remoto, marcando esta versão como um ponto importante do desenvolvimento.
+
+    git fetch –tags
+
+Este comando faz o download de todas as tags do repositório remoto para o repositório local. Garante que todas as tags remotas sejam atualizadas e disponíveis localmente.
+
+
