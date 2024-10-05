@@ -178,9 +178,9 @@ Excerto de código utilizado para o desenvolvimento do email
 
     git checkout -b fixing-invalid-email
 
-##### Foi criado um Issue #1 para resolver o problema de validação do e-mail
-
 ![Imagem9](img/Imagem9.png)
+
+##### Foi criado um Issue #1 para resolver o problema de validação do e-mail
 
 ![Imagem10](img/Imagem10.png)
 
@@ -193,4 +193,5 @@ Testes unitários para validação do email
     git push
     git tag 1.3.1
     git push origin 1.3.1
-
+    
+Comandos finais para fazer o último commit e criação da tag 1.3.1
