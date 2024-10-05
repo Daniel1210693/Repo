@@ -148,7 +148,7 @@ Verificar os ficheiros modificados e adicioná-los ao commit
 Este comando é utilizado para criar, listar ou eliminar branches no Git. No caso deste comando específico, é usado para criar uma nova branch.
 
     git commit -m 'Parte 2 - Branch Email-Field'
-    
+#
     git push --set-upstream origin email-field
 
 Este comando envia a branch local email-field para o repositório remoto (GitHub), criando a branch também no GitHub, e define a branch remota origin/email-field como o "upstream" para a branch local. Isso significa que, no futuro, qualquer git push ou git pull na branch email-field será automaticamente associado a essa branch remota.
