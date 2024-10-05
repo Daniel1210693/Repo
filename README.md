@@ -283,4 +283,13 @@ Mercurial, também conhecido como Hg, é outro sistema de controlo de versões d
 
 #
 
+## Conclusão
+
+No geral, o Git prevalece em popularidade e adoção, sobretudo pela sua flexibilidade e integração com plataformas como GitHub e GitLab. No entanto, o SVN ainda pode ser uma escolha válida em ambientes mais controlados e centralizados, enquanto o Mercurial se destaca pela simplicidade, apesar de ter perdido terreno face ao Git em termos de adoção.
+
+# Implementação do Mercurial
+
+## Parte 1
+
+## 1º Passo – Criação do Repositório e do Readme
 
