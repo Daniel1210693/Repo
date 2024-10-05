@@ -173,5 +173,24 @@ Excerto de código utilizado para o desenvolvimento do email
 Neste ponto, deve ser adicionada a funcionalidade de um campo de email para os empregados, juntamente com a criação de testes unitários para validar a criação de empregados e a verificação dos seus atributos (por exemplo, garantir que não há valores nulos ou vazios). Após a conclusão e testagem da nova funcionalidade, o código deve ser comprometido e integrado na branch principal, seguido da criação de uma nova tag (ex.: v1.3.0).
 
 ![Imagem8](img/Imagem8.png)
-![image](https://github.com/user-attachments/assets/0e7afdd5-06eb-4539-8e95-f51cc0ca2e76)
+
+Excerto de código utilizado para o desenvolvimento do email
+
+    git checkout -b fixing-invalid-email
+
+##### Foi criado um Issue #1 para resolver o problema de validação do e-mail
+
+![Imagem9](img/Imagem9.png)
+
+![Imagem10](img/Imagem10.png)
+
+Testes unitários para validação do email
+
+    git commit –m “Issue #1 - Fixing Invalid Email”
+    git push --set-upstream fixing-invalid-email
+    git checkout main
+    git merge fixing-invalid-email
+    git push
+    git tag 1.3.1
+    git push origin 1.3.1
 
