@@ -132,5 +132,27 @@ O comando git revert 2efbc828acd05996363bf7fca8b75cfbddc01d7c reverte as altera�
 
 > **Nota**: Neste ponto executamos o comando revert mais vezes do que as necessárias, pois executamos incorretamente o comando, criando um revert que não era o nosso desejado, para corrigir o problema, fizemos outra sequencia de revert, a primeira para voltar ao ponto inicial e a segunda para irmos para o ponto desejado.
 
+![Imagem6](img/Imagem6.png)
 
+## 9º Passo – Criação de uma Nova Branch
+
+Neste tópico, o objetivo é a criação de uma branch principal (main) que deve ser utilizada para publicar versões estáveis da aplicação "Building REST services with Spring". Cada nova funcionalidade deve ser desenvolvida numa branch com o nome da respetiva funcionalidade. As funcionalidades, após serem testadas, devem ser integradas na branch principal (main) para o lançamento de uma nova versão da aplicação.
+
+    git status
+    git add .
+    
+Verificar os ficheiros modificados e adicioná-los ao commit
+
+    git branch “Branch Email-Field”
+
+Este comando é utilizado para criar, listar ou eliminar branches no Git. No caso deste comando específico, é usado para criar uma nova branch.
+
+    git commit -m 'Parte 2 - Branch Email-Field'
+    
+    git push --set-upstream origin email-field
+
+Este comando envia a branch local email-field para o repositório remoto (GitHub), criando a branch também no GitHub, e define a branch remota origin/email-field como o "upstream" para a branch local. Isso significa que, no futuro, qualquer git push ou git pull na branch email-field será automaticamente associado a essa branch remota.
+git checkout main
+Este comando muda para a branch main no repositório local. Isso permite preparar a branch principal para fundir as alterações da branch email-field.
+git merge email-field
 
