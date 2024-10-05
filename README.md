@@ -243,11 +243,14 @@ O Git é um sistema de controlo de versões distribuído, criado por Linus Torva
 •	**Histórico reescrevível:** A possibilidade de reescrever o histórico pode ser perigosa se usada incorretamente, causando perda de dados. <br>
 •	**Gestão de ficheiros grandes:** Embora existam ferramentas como o Git LFS (Large File Storage), o Git não é ideal para lidar com ficheiros muito grandes.
 
+#
+
 ## Subversion (SVN) <br><br> Descrição:
 
 Subversion, também conhecido como SVN, é um sistema de controlo de versões centralizado, criado em 2000 como sucessor do CVS. Utiliza um servidor central para armazenar o repositório, e os programadores fazem checkouts de cópias locais dos ficheiros para trabalhar.
 
 ### Vantagens:
+
 •	**Simplicidade:** O SVN tem uma curva de aprendizagem mais suave, sendo mais fácil para principiantes. <br>
 •	**Controlo centralizado:** O modelo centralizado pode ser mais simples para equipas que preferem um único ponto de referência e controlo sobre o código. <br>
 •	**Histórico linear:** O histórico no SVN é sempre linear, sem a complexidade de branches distribuídas. <br>
@@ -258,5 +261,26 @@ Subversion, também conhecido como SVN, é um sistema de controlo de versões ce
 •	**Centralizado:** Os programadores dependem de um servidor central para a maioria das operações, o que pode ser problemático em caso de falta de ligação à internet. <br>
 •	**Desempenho:** As operações de rede são mais lentas em comparação com sistemas distribuídos, pois requerem comunicação constante com o servidor. <br>
 •	**Branching mais complexo:** Embora seja possível criar branches, o processo é mais lento e menos intuitivo do que no Git ou Mercurial.
+
+#
+
+## Mercurial (Hg) <br><br> Descrição:
+
+Mercurial, também conhecido como Hg, é outro sistema de controlo de versões distribuído, lançado em 2005, na mesma época que o Git. Foi projetado para ser fácil de usar, oferecendo algumas das mesmas vantagens de um sistema distribuído.
+
+### Vantagens:
+
+•	**Distribuído:** Tal como o Git, o Mercurial permite que os programadores tenham uma cópia completa do repositório nos seus sistemas locais.
+•	**Curva de aprendizagem:** O Mercurial é considerado mais simples e amigável para principiantes em comparação com o Git.
+•	**Velocidade:** O desempenho do Mercurial é comparável ao do Git, em termos de operações locais e eficiência.
+•	**Histórico imutável:** O histórico de commits no Mercurial é mais restrito e não pode ser reescrito facilmente, o que oferece maior segurança para equipas que preferem um histórico claro e imutável.
+
+### Desvantagens:
+
+•	**Menor popularidade:** O Mercurial tem uma comunidade menor e menos ferramentas de integração comparado com o Git.
+•	**Branching:** Embora suporte branching, não é tão avançado ou flexível quanto o Git.
+•	**Menor flexibilidade:** O Mercurial prioriza a simplicidade, oferecendo menos opções de personalização para utilizadores avançados.
+
+#
 
 
