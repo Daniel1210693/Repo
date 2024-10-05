@@ -195,3 +195,31 @@ Testes unitários para validação do email
     git push origin 1.3.1
     
 Comandos finais para fazer o último commit e criação da tag 1.3.1
+
+# Outros comandos
+
+Neste tópico abordamos outros comandos que utilizamos para a resolução do nosso projeto 
+
+    git ignore
+    *.Zone.Identifier
+
+Adicionamos ao nosso git ignore um comando para ignorar os ficheiros Zone.Identifier
+
+    git config --global user.email "exemplo@isep.ipp.pt"
+
+Configura o endereço de e-mail associado aos commits. Este e-mail será exibido nos registos de histórico de versões do Git.
+
+    git config --global user.name "Aluno"
+
+Configura o nome de utilizador que será associado aos commits. Tal como o e-mail, o nome aparecerá no histórico de commits.
+
+    find . -name "*.Identifier" -type f
+
+Este comando procura todos os ficheiros do tipo .Identifier. 
+
+    find . -name "*.Identifier" -type f -delete
+
+Este comando elimina todos os ficheiros do tipo .Identifier. 
+
+> **Nota**: Utilizamos estes comandos, pois o Windows e o WLS criaram vários ficheiros Zone.Identifier que não tinham utilidade para o projeto. 
+
