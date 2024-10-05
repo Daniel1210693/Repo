@@ -291,3 +291,56 @@ No geral, o Git prevalece em popularidade e adoção, sobretudo pela sua flexibi
 
 ## Parte 1 <br><br> 1º Passo – Criação do Repositório e do Readme
 
+![Imagem11](img/Imagem11.png)
+
+![Imagem12](img/Imagem12.png)
+
+## 2º Passo – Criação da Primeira Tag 1.1.0
+
+![Imagem13](img/Imagem13.png)
+
+## 3º Passo – Primeiro Commit do Código, Testes Unitários e criação da tag 1.2.0
+
+![Imagem14](img/Imagem14.png)
+
+![Imagem15](img/Imagem15.png)
+
+## 4º Passo – Logs
+
+![Imagem16](img/Imagem16.png)
+
+## 5º Passo – Revert para o Commit original e Conclusão da Primeira Parte
+
+![Imagem17](img/Imagem17.png)
+
+![Imagem18](img/Imagem18.png)
+
+## Parte 2 <br><br> 1º Passo – Criação da Branch
+
+![Imagem19](img/Imagem19.png)
+
+![Imagem20](img/Imagem20.png)
+
+## 2º Passo – Implementação do Código do Email e dos Testes Unitários
+
+![Imagem21](img/Imagem21.png)
+
+![Imagem22](img/Imagem22.png)
+
+## 3º Passo – Merge da Branch Email Field e criação da Tag 1.3.0
+
+![Imagem23](img/Imagem23.png)
+
+![Imagem24](img/Imagem24.png)
+
+## 4º Passo – Criação da Branch Fixing Invalid Email e Testes Unitários
+
+![Imagem25](img/Imagem25.png)
+
+![Imagem26](img/Imagem26.png)
+
+## 5º Passo – Merge da Branch Fixing Invalid Email e Criação das Tags Finais
+
+![Imagem27](img/Imagem27.png)
+
+![Imagem28](img/Imagem28.png)
