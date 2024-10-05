@@ -270,15 +270,15 @@ Mercurial, também conhecido como Hg, é outro sistema de controlo de versões d
 
 ### Vantagens:
 
-•	**Distribuído:** Tal como o Git, o Mercurial permite que os programadores tenham uma cópia completa do repositório nos seus sistemas locais.
-•	**Curva de aprendizagem:** O Mercurial é considerado mais simples e amigável para principiantes em comparação com o Git.
-•	**Velocidade:** O desempenho do Mercurial é comparável ao do Git, em termos de operações locais e eficiência.
+•	**Distribuído:** Tal como o Git, o Mercurial permite que os programadores tenham uma cópia completa do repositório nos seus sistemas locais. <br>
+•	**Curva de aprendizagem:** O Mercurial é considerado mais simples e amigável para principiantes em comparação com o Git. <br>
+•	**Velocidade:** O desempenho do Mercurial é comparável ao do Git, em termos de operações locais e eficiência. <br>
 •	**Histórico imutável:** O histórico de commits no Mercurial é mais restrito e não pode ser reescrito facilmente, o que oferece maior segurança para equipas que preferem um histórico claro e imutável.
 
 ### Desvantagens:
 
-•	**Menor popularidade:** O Mercurial tem uma comunidade menor e menos ferramentas de integração comparado com o Git.
-•	**Branching:** Embora suporte branching, não é tão avançado ou flexível quanto o Git.
+•	**Menor popularidade:** O Mercurial tem uma comunidade menor e menos ferramentas de integração comparado com o Git. <br>
+•	**Branching:** Embora suporte branching, não é tão avançado ou flexível quanto o Git. <br>
 •	**Menor flexibilidade:** O Mercurial prioriza a simplicidade, oferecendo menos opções de personalização para utilizadores avançados.
 
 #
