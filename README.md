@@ -289,7 +289,5 @@ No geral, o Git prevalece em popularidade e adoção, sobretudo pela sua flexibi
 
 # Implementação do Mercurial
 
-## Parte 1
-
-## 1º Passo – Criação do Repositório e do Readme
+## Parte 1 <br><br> 1º Passo – Criação do Repositório e do Readme
 
