@@ -23,13 +23,15 @@ Inicialmente criamos um novo diretório onde será feito o projeto. Para isso, u
 ### 2º Passo - Clone do Projeto
 
 **Resolução:** <br>
-Após isso fizemos o clone de um outro projeto para o nosso e removemos o .git para o evitar conflitos
+Após isso fizemos, voltamos a criar uma pasta, desta vez para a Part 1, e logo em seguida fizemos o clone de um outro projeto para o nosso e removemos o .git para o evitar conflitos
 
+    mkdir Part1
     git clone https://github.com/lmpnogueira/cogsi2425.git
     rm .git
 
+**Resultado:** <br>
+
 ![Imagem1](img/1.png)
-<br>Print Part1
 
 ### 3º Passo - Criação dos Issues
 
