@@ -289,7 +289,7 @@ E adicionada a respetiva tag.
 **Resolução:** <br>
 Como primeiro ponto foi criada uma branch e issue para trabalhar neste passo, para isso foram feitos os comandos:
 
-    git branch "javadoc"
+    git checkout -b "javadoc"
 
 ![Imagem11_1](img/12_2.png)
 
