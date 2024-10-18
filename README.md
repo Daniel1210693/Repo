@@ -8,9 +8,9 @@ Os resultados deste trabalho serão documentados num ficheiro readme.md no repos
 
 ## Parte 1
 ### 1º Passo - Criação da Pasta CA2 e Part1
-
 **Resolução:** <br>
-Inicialmente criamos um novo diretório onde será feito o projeto. Para isso, usamos os seguintes comandos:
+Inicialmente criamos um novo diretório onde será feito o projeto. <br>
+Para isso, usamos os seguintes comandos:
 
     mkdir CA2
     cd CA2
@@ -18,14 +18,15 @@ Inicialmente criamos um novo diretório onde será feito o projeto. Para isso, u
 
 **Resultado:** <br>
 
-
+![Imagem1_1](img/1_1.png)
 
 ### 2º Passo - Clone do Projeto
+**Objetivo:** <br>
+Usar a aplicação Building REST services with Spring que deve ser adicionar ao repositório
 
 **Resolução:** <br>
-Após isso fizemos, voltamos a criar uma pasta, desta vez para a Part 1, e logo em seguida fizemos o clone de um outro projeto para o nosso e removemos o .git para o evitar conflitos
+Após isso fizemos o clone de um outro projeto para o nosso e removemos o .git para o evitar conflitos
 
-    mkdir Part1
     git clone https://github.com/lmpnogueira/cogsi2425.git
     rm .git
 
@@ -34,23 +35,38 @@ Após isso fizemos, voltamos a criar uma pasta, desta vez para a Part 1, e logo 
 ![Imagem1](img/1.png)
 
 ### 3º Passo - Criação dos Issues
+**Objetivo:**<br>
+Criar issue(s) no GitHub para as principais tarefas.
+
+**Resolução:** <br>
+Optamos por utilizar a interface do GitHub para criamos os issue de uma forma mais rápida.
+
+**Resultado:** <br>
 
 ![Imagem2](img/2.png)
 
+>**Nota:** À medida que fomos desenvolvendo o nosso projeto, fomos criando issue que se adequavam aos problemas que fomos encontrando.
+
 ### 4º Passo - Criação de Tag CA2-1.1.0
+**Objetivo:**<br>
+Usar tags para marcar as versões da aplicação.
+
+**Resolução:** <br>
+Utilizamos os seguintes comandos para a criação da primeira tag nesta segundo CA.
 
     git tag ca2-1.1.0
     git tag
 
-### <Após isso fica fizemos o primeiro commit>
-
-    git add .
-    git commit -m "Pasta CA2"
-    git push -u origin main
+**Resultado:**<br>
 
 ![Imagem3](img/3.png)
 
 ### 5º Passo - Task para Executar o Server
+**Objetivo:**<br>
+Adicionar uma nova tarefa Gradle para executar o servidor.
+
+**Resolução:** <br>
+Neste passo desenvolvemos o seguinte código para conseguir executar o servidor.
 
     task runServer(type:JavaExec, dependsOn: classes) {
         group = "DevOps"
@@ -60,10 +76,28 @@ Após isso fizemos, voltamos a criar uma pasta, desta vez para a Part 1, e logo 
         args '59001' 
     }
 
+Este código cria uma task no Gradle chamada `runServer`, que serve para executar uma aplicação Java na porta 59001. <br>
+Basicamente, esta task faz o seguinte: primeiro compila o código, depois vai buscar as bibliotecas necessárias, e finalmente executa o servidor.<br>
+A task faz parte do grupo "DevOps", e passa a porta onde o servidor vai rodar como argumento (59001).
+
+Para executar esta task em primeiro lugar fazemos o comando:
+
+    ./gradelw build
+
+E em seguida o comando:
+
+    ./gradelw runServer
+
+**Resultado:**<br>
+
 ![Imagem5](img/5.png)
 
 ### 6º Passo - Testes Unitários
-Dentro do directorio Part1/gradle_basic_demo/src
+**Objetivo:**<br>
+Adicionar um teste unitário simples e atualizar o script de build do Gradle para que possa executar o teste.
+
+**Resolução:** <br>
+Dentro do diretório Part1/gradle_basic_demo/src criamos o ficheiro AppTest.java onde serão feitos os testes unitários.
 
     mkdir test/java/basic_demo
     nano AppTest.java
@@ -82,6 +116,8 @@ Codigo para jogo
         
         }
     }
+
+**Resultado:**<br>
 
 ### 7º Passo - Task Backup
 Neste tópico desenvolve-mos código para 
