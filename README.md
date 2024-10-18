@@ -242,30 +242,30 @@ Esta tarefa do Gradle é projetada para compactar o código fonte localizado no 
 **Resolução:** <br>
 Como primeiro ponto foi criada uma branch e issue para trabalhar neste passo, para isso foram feitos os comandos:
 
-    git branch "installDist"
+    git checkout -b "installDist"
 
 ![Imagem11_1](img/11_1.png)
 
 Em seguida foi criado o código para a Task.
 
-    task runDistApp(type: Exec){
-        group = "Application"
+    task runDistributionScript(type: Exec){
+        group = "Distribution"
         description = "Runs the application using the generated distribution scripts."
-
+    
         dependsOn installDist
-
+    
         def os = org.gradle.internal.os.OperatingSystem.current()
-        
+    
         def appDir = "$buildDir/install/${project.name}/bin"
         def execScript
-        
+    
         if (os.isWindows()) {
             execScript = "${appDir}/${project.name}.bat"
         } else {
             execScript = "${appDir}/${project.name}"
         }
-        
-        println "Running the application using: $execScript"
+    
+        println "Running: $execScript"
         executable = execScript
     }
 
