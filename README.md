@@ -1,6 +1,6 @@
 # Introdução
 
-TEXTO 
+Este projeto, tem como objetivo explorar e aplicar ferramentas de automação de build, com especial foco na utilização do Gradle. O trabalho está dividido em duas partes principais: a primeira, focada na prática de Gradle através de um exemplo simples, e a segunda, na adaptação de uma aplicação de serviços REST para utilizar Gradle em vez de Maven.
 
 # Tutorial
 
