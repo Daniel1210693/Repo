@@ -1,6 +1,8 @@
 # Introdução
 
-Este projeto, tem como objetivo explorar e aplicar ferramentas de automação de build, com especial foco na utilização do Gradle. O trabalho está dividido em duas partes principais: a primeira, focada na prática de Gradle através de um exemplo simples, e a segunda, na adaptação de uma aplicação de serviços REST para utilizar Gradle em vez de Maven.
+Este projeto, tem como objetivo explorar a automação de builds utilizando o Gradle. O trabalho está dividido em duas partes: na primeira, focamo-nos na aplicação de conceitos básicos do Gradle através de um exemplo simples, como a criação de tarefas personalizadas e o controlo de versões com tags. Na segunda parte, a nossa tarefa é converter uma aplicação de serviços REST, originalmente desenvolvida com Maven, para Gradle, implementando novas funcionalidades e otimizando o processo de build.
+Além disso, é-nos solicitado que apresentemos uma solução alternativa ao Gradle, analisando e comparando as suas funcionalidades e eficiência em relação à ferramenta original. Por fim, toda a documentação deste projeto, incluindo os passos seguidos e as decisões tomadas, será detalhada num ficheiro readme.md, armazenado no repositório do grupo, de forma a garantir a replicação do trabalho desenvolvido.
+Os resultados deste trabalho serão documentados num ficheiro readme.md no repositório do grupo, com uma explicação detalhada dos passos e decisões tomadas durante o desenvolvimento, facilitando a sua reprodutibilidade.
 
 # Tutorial
 
