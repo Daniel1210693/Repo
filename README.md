@@ -9,11 +9,21 @@ Os resultados deste trabalho serão documentados num ficheiro readme.md no repos
 ## Parte 1
 ### 1º Passo - Criação da Pasta CA2 e Part1
 
+**Resolução:** <br>
+Inicialmente criamos um novo diretório onde será feito o projeto. Para isso, usamos os seguintes comandos:
+
     mkdir CA2
     cd CA2
     mkdir Part1
 
+**Resultado:** <br>
+
+
+
 ### 2º Passo - Clone do Projeto
+
+**Resolução:** <br>
+Após isso fizemos o clone de um outro projeto para o nosso e removemos o .git para o evitar conflitos
 
     git clone https://github.com/lmpnogueira/cogsi2425.git
     rm .git
