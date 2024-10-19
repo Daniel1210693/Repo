@@ -519,7 +519,10 @@ Bazel é uma ferramenta de build desenvolvida pelo Google, projetada para alta p
 
 ## Conclusão
 
-Em resumo, o **Gradle** é a opção mais moderna, com excelente performance e flexibilidade, ideal para projetos complexos como Android. Já o **Maven** é mais simples de usar e segue convenções padronizadas, sendo ótimo para projetos Java tradicionais, mas com menos flexibilidade. O **Ant** oferece total controle sobre o build, mas exige muita configuração manual, tornando-se menos eficiente em comparação com as outras ferramentas. Por fim, o **Bazel** é o mais rápido e escalável, perfeito para projetos gigantescos e multiplataforma, mas sua complexidade o torna menos adequado para projetos menores.
+Em resumo, o **Gradle** é a opção mais moderna, com excelente performance e flexibilidade, ideal para projetos complexos como Android. <br>
+Já o **Maven** é mais simples de usar e segue convenções padronizadas, sendo ótimo para projetos Java tradicionais, mas com menos flexibilidade. <br> 
+O **Ant** oferece total controle sobre o build, mas exige muita configuração manual, tornando-se menos eficiente em comparação com as outras ferramentas. <br> 
+Por fim, o **Bazel** é o mais rápido e escalável, perfeito para projetos gigantescos e multiplataforma, mas sua complexidade o torna menos adequado para projetos menores.
 
 # Implementação do ANT
 
@@ -551,20 +554,22 @@ Em resumo, o **Gradle** é a opção mais moderna, com excelente performance e f
 
     ant -version
 
-![Imagemant3](img/ant3.png)
+![Imagemant1](img/ant1.png)
 
 ## 2º Passo - Criação dos Ficheiros
-Após a instalação do ANT, fizemos a cópia da pasta src e criamos um ficheiro build.xml e ivy.xml
+Após a instalação do ANT, criamos um novo diretório, onde fizemos a cópia da pasta src e criamos um ficheiro build.xml e ivy.xml, por fim, criamos uma pasta chamada lib com as bibliotecas necessárias.
+
+![Imagemant2](img/ant2.png)
 
 ### Ficheiro Build.xml
 Configuração do ficheiro Build.xml
 
-![Imagemant1](img/ant1.png)
+![Imagemant3](img/ant3.png)
 
 ### Ficheiro Ivy.xml
 Configuração do ficheiro Ivy.xml
 
-![Imagemant2](img/ant2.png)
+![Imagemant4](img/ant4.png)
 
 ## 3º Passo - Task Backup
 
