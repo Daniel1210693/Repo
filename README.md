@@ -198,6 +198,8 @@ Explicar por que não foi necessário fazer o download e instalar manualmente ve
 
 **Resolução:**<br>
 **Resultado:**<br>
+![Imagem9](img/9.png)
+
 # FAZER
 
 ### 10º Passo - Tag Final
@@ -212,7 +214,8 @@ Por fim para concluir a primeira parte do projeto, criamos a última tag.
     git fetch -tags
 
 **Resultado:**<br>
-# METER PRINT
+
+![Imagem10](img/10.png)
 
 ## Parte 2
 
@@ -438,9 +441,13 @@ Após isso adicionamos as dependências necessárias para garantir que não have
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-**Resultado:**<br>
+Em seguida desenvolvemos este código para os testes
 
 ![Imagem16_2](img/16_2.png)
+
+**Resultado:**<br>
+
+![Imagem16_3](img/16_3.png)
 
 ### 7º Passo - Tag Final
 **Objetivo:**<br>
