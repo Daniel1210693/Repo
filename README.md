@@ -8,7 +8,7 @@ Os resultados deste trabalho serão documentados num ficheiro readme.md no repos
 
 ## Parte 1
 ### 1º Passo - Criação da Pasta CA2 e Part1
-**Resolução:** <br>
+**Resolução:**<br>
 Inicialmente criamos um novo diretório onde será feito o projeto. <br>
 Para isso, usamos os seguintes comandos:
 
@@ -16,42 +16,42 @@ Para isso, usamos os seguintes comandos:
     cd CA2
     mkdir Part1
 
-**Resultado:** <br>
+**Resultado:**<br>
 
 ![Imagem1_1](img/1_1.png)
 
 ### 2º Passo - Clone do Projeto
-**Objetivo:** <br>
+**Objetivo:**<br>
 Usar a aplicação Building REST services with Spring que deve ser adicionar ao repositório
 
-**Resolução:** <br>
+**Resolução:**<br>
 Após isso fizemos o clone de um outro projeto para o nosso e removemos o .git para o evitar conflitos
 
     git clone https://github.com/lmpnogueira/cogsi2425.git
     rm .git
 
-**Resultado:** <br>
+**Resultado:**<br>
 
-![Imagem1](img/1.png)
+![Imagem2_1](img/2_1.png)
 
 ### 3º Passo - Criação dos Issues
 **Objetivo:**<br>
 Criar issue(s) no GitHub para as principais tarefas.
 
-**Resolução:** <br>
+**Resolução:**<br>
 Optamos por utilizar a interface do GitHub para criamos os issue de uma forma mais rápida.
 
-**Resultado:** <br>
+**Resultado:**<br>
 
-![Imagem2](img/2.png)
+![Imagem3_1](img/3_1.png)
 
->**Nota:** À medida que fomos desenvolvendo o nosso projeto, fomos criando issue que se adequavam aos problemas que fomos encontrando.
+>**Nota:** À medida que fomos desenvolvendo o nosso projeto, fomos criando issue que se adequavam aos problemas que fomos encontrando. Nem sempre foram descritos ao longo do relatrório
 
 ### 4º Passo - Criação de Tag CA2-1.1.0
 **Objetivo:**<br>
 Usar tags para marcar as versões da aplicação.
 
-**Resolução:** <br>
+**Resolução:**<br>
 Utilizamos os seguintes comandos para a criação da primeira tag nesta segundo CA.
 
     git tag ca2-1.1.0
@@ -59,13 +59,14 @@ Utilizamos os seguintes comandos para a criação da primeira tag nesta segundo 
 
 **Resultado:**<br>
 
-![Imagem3](img/3.png)
+![Imagem4_1](img/4_1.png)
+>**Nota:** Nesta screenshot já se encontra com todas as tags feitas para a CA2
 
 ### 5º Passo - Task para Executar o Server
 **Objetivo:**<br>
 Adicionar uma nova tarefa Gradle para executar o servidor.
 
-**Resolução:** <br>
+**Resolução:**<br>
 Neste passo desenvolvemos o seguinte código para conseguir executar o servidor.
 
     task runServer(type:JavaExec, dependsOn: classes) {
@@ -96,13 +97,13 @@ E em seguida o comando:
 **Objetivo:**<br>
 Adicionar um teste unitário simples e atualizar o script de build do Gradle para que possa executar o teste.
 
-**Resolução:** <br>
+**Resolução:**<br>
 Dentro do diretório Part1/gradle_basic_demo/src criamos o ficheiro AppTest.java onde serão feitos os testes unitários.
 
     mkdir test/java/basic_demo
     nano AppTest.java
 
-Codigo para jogo
+Codigo para 
 
     package basic_demo;
     import static org.junit.Assert.assertNotNull;
@@ -119,57 +120,107 @@ Codigo para jogo
 
 **Resultado:**<br>
 
+![Imagem6_1](img/6_1.png)
+
 ### 7º Passo - Task Backup
-Neste tópico desenvolve-mos código para 
+**Objetivo:**<br>
+Adicionar uma nova tarefa do tipo copy para ser usada para fazer um backup dos ficheiros da aplicação. 
+- Deve copiar o conteúdo da pasta src para uma nova pasta de backup.
+
+**Resolução:**<br>
+Para resolver este objetivo, criamos o seguinte código:
 
     task backupSources(type: Copy) {
         group = "DevOps"
         description = "Backup of the sources of the application"
+
         from 'src'
         into 'backup/'
     }
 
-Para além da task para cirar o backup, criamos tambem uma task para apagar o backup
+Este código define uma tarefa chamada `backupSources` para realizar o backup dos arquivos de código da aplicação. <br> 
+A tarefa pertence ao grupo "DevOps", com a descrição "Backup das fontes da aplicação". Ela copia os arquivos da pasta src para a pasta backup/.
+
+Para além da task para cirar o backup, criamos tambem uma task para apagar o backup.
 
     task deleteBackup(type: Delete) {
         delete 'backup' 
     }
 
 Execução da task ./gradlew backupSources
-![Imagem7](img/7_1.png)
+
+![Imagem7_1](img/7_1.png)
+
+**Resultado:**<br>
+
+![Imagem7_2](img/7_2.png)
 
 ### 8º Passo - Task Zip
+**Objetivo:**<br>
+Adicionar uma nova task do tipo Zip para ser usada para criar um arquivo (ou seja, um ficheiro zip) do backup da aplicação.  
+- Esta task deve depender da execução da task de backup.
+
+**Resolução:**<br>
+Para resolver este objetivo, criamos o seguinte código:
 
     task createZip(type: Zip) {
         group = "DevOps"
         description = "Zip archive of the sources of the application"
+
         from 'src'
         archiveFileName = 'zipfile.zip'
         destinationDirectory = file('backup/')
     }
 
-Para além da task para cirar o zip, criamos tambem uma task para apagar o zip  
+Este código define uma task chamada `createZip`, que cria um arquivo ZIP contendo os arquivos de código da aplicação. <br>
+A task pertence ao grupo "DevOps" e tem a descrição "Arquivo zip das fontes da aplicação". <br>
+Ela pega nos arquivos da pasta src, cria um arquivo ZIP chamado zipfile.zip e guarda-o na pasta backup/.
+
+Para além da task para cirar o zip, criamos tambem uma task para apagar o zip.
 
     task deleteZip(type: Delete) {
         delete file('backup/zipfile.zip')
     }   
 
 Execução da task ./gradlew createZip
-![Imagem7](img/7_2.png)
 
-### 9º Passo - Tag Final
+![Imagem8_1](img/8_1.png)
+
+**Resultado:**<br>
+
+![Imagem8_2](img/8_2.png)
+
+### 9º Passo - javaToolchain
+**Objetivo:**<br>
+Explicar por que não foi necessário fazer o download e instalar manualmente versões específicas do Gradle e do JDK para construir e executar esta aplicação.
+- No diretório raiz da aplicação, executa “gradle –q javaToolchain” e explica o resultado.
+
+**Resolução:**<br>
+**Resultado:**<br>
+# FAZER
+
+### 10º Passo - Tag Final
+**Objetivo:**<br>
+No final da tarefa, marca o teu commit com a tag **ca2-part1**.
+
+**Resolução:**<br>
+Por fim para concluir a primeira parte do projeto, criamos a última tag.
 
     git tag ca2-part1
     git push origin ca2-part1
     git fetch -tags
 
+**Resultado:**<br>
+# METER PRINT
+
 ## Parte 2
 
 ### 1º Passo - Criação do Projeto Gradle
-**Objetivo:** Num diretório vazio, utiliza o comando *gradle init* para criar um projeto Gradle.  
+**Objetivo:**<br>
+Num diretório vazio, utiliza o comando *gradle init* para criar um projeto Gradle.  
  - Substitui a pasta *src* pela da aplicação "Building REST services with Spring".
 
-**Resolução:** <br>
+**Resolução:**<br>
 Para resolver este objetivo criamos um directorio vazio chamado Part2 dentro da pasta CA2
 
     mkdir Part2
@@ -189,117 +240,219 @@ E selecionamos as seguintes opções
 7. 1 "JUnit 4"
 8. yes (Generate Build Using new APIs and Behavior)
 
-![Imagem9](img/9.png)
+![Imagem11_1](img/11_1.png)
 
 > **Nota:** Estas opções foram feitas com base nas ferramentas já usadas para a parte 1 do projeto, e com base no conforte com que temos nas mesmas.
 
 ### 2º Passo - Adição de Todos as Dependências e Plugins
-**Objetivo:** Certifica-te de que todas as dependências e plugins necessários estão adicionados ao teu script de build do Gradle.  
+**Objetivo:**<br>
+Certifica-te de que todas as dependências e plugins necessários estão adicionados ao teu script de build do Gradle.  
  - Compila e executa a aplicação com `./gradlew bootRun`.  
  - Utiliza o teu navegador em [http://localhost:8080/employees](http://localhost:8080/employees).
 
+**Resolução:**<br>
+
+# FAZER
+
+**Resultado:**<br>
+
+Execução da task `./gradlew bootRun`
+
+![Imagem12_1](img/12_1.png)
+
 ### 3º Passo - Task de Zipar e Armazenar no Directório Backup
-**Objetivo:** Criar uma tarefa personalizada que comprime (em formato zip) todo o código-fonte do projeto e o armazena num diretório de backup.
+**Objetivo:**<br>
+Criar uma tarefa personalizada que comprime (em formato zip) todo o código-fonte do projeto e o armazena num diretório de backup.
 - Esta tarefa deve tratar tanto da cópia como da compressão do código-fonte, garantindo um processo de backup limpo.
 
-**Resolução:** 
-    
+**Resolução:**<br>
+Como primeiro ponto foi criada uma branch, tag e issue para trabalhar neste passo, para isso foram feitos os comandos:
+
+**Branch**
+
+    git branch "source-code-zip"
+
+**Tag**
+
+    git tag ca2-1.2.0
+
+**Issue**
+
+![Imagem13_1](img/13_1.png)
+
+Em seguida foi feito o seguinte código para criar o Backup:
+
     task backupProject(type: Zip) {
-        group = "Backup"
-        description = "Zips the entire source code and stores it in a backup directory."
+    group = "Backup"
+    description = "Zips the code into a backup"
 
-        from 'src'
-        include '**/*'
-        
-        destinationDirectory = file("backups")
-        
-        archiveFileName = "source-backup-${new Date().format
-        ('yyyy-MM-dd_HH-mm-ss')}.zip"
-        
-        doFirst {
-            println "Cleaning backup directory and preparing for zipping the source code..."
-            delete file("backups")
-            mkdir file("backups")
-        }
-        
-        doLast {
-            println "Source code successfully backed up and stored in ${destinationDirectory.get().asFile.absolutePath}"
-        }
+    from 'src'
+    include '*/'
+
+    destinationDirectory = file("backups")
+
+    archiveFileName = "source-backup-${new Date().format('yyyy-MM-dd_HH-mm-ss')}.zip"
+
+    doFirst {
+        println "Zipping the source code..."
+        delete file("backups")
+        mkdir file("backups")
     }
+}
 
-Esta tarefa do Gradle é projetada para compactar o código fonte localizado no diretório src, armazená-lo em um diretório de backup chamado backups, e nomear o arquivo ZIP de acordo com a data e hora atuais. Antes de compactar, ela limpa o diretório de backup anterior e cria um novo (doFirst), e ao final, informa que o backup foi realizado com sucesso (doLast).
+Esta tarefa do Gradle é projetada para compactar o código fonte localizado no diretório src, armazená-lo em um diretório de backup chamado backups, e nomear o arquivo ZIP de acordo com a data e hora atuais. <br>
+Antes de compactar, ele limpa o diretório de backup anterior e cria um novo (doFirst), e ao final, informa que o backup foi realizado com sucesso (doLast).
 
-**Resultado Final:**
+Execução da task `./gradlew backupProject`
 
-![Imagem10_2](img/10_2.png)
+![Imagem13_2](img/13_2.png)
 
-# PRINT COMMIT
+**Resultado:**<br>
+
+![Imagem13_3](img/13_3.png)
 
 ### 4º Passo - Task do InstallDist
-**Objetivo:** Criar uma tarefa personalizada que dependa da tarefa *installDist* e executar a aplicação utilizando os scripts de distribuição gerados.  
+**Objetivo:**<br>
+Criar uma tarefa personalizada que dependa da tarefa *installDist* e executar a aplicação utilizando os scripts de distribuição gerados.  
  - Define o script executável com base no sistema operativo.
 
-**Resolução:** <br>
-Como primeiro ponto foi criada uma branch e issue para trabalhar neste passo, para isso foram feitos os comandos:
+**Resolução:**<br>
+Como primeiro ponto foi criada uma branch, tag e issue para trabalhar neste passo, para isso foram feitos os comandos:
 
-    git checkout -b "installDist"
+**Branch**
 
-![Imagem11_1](img/11_1.png)
+    git branch "installdist"
+
+**Tag**
+
+    git tag ca2-1.3.0
+
+**Issue** <br>
+
+![Imagem14_1](img/14_1.png)
 
 Em seguida foi criado o código para a Task.
 
     task runDistributionScript(type: Exec){
         group = "Distribution"
         description = "Runs the application using the generated distribution scripts."
-    
+
         dependsOn installDist
-    
+
         def os = org.gradle.internal.os.OperatingSystem.current()
-    
+
         def appDir = "$buildDir/install/${project.name}/bin"
         def execScript
-    
+
         if (os.isWindows()) {
             execScript = "${appDir}/${project.name}.bat"
         } else {
             execScript = "${appDir}/${project.name}"
         }
-    
+
         println "Running: $execScript"
         executable = execScript
     }
 
-A tarefa runDistApp é projetada para executar a aplicação usando os scripts de distribuição gerados pelo Gradle. 
+A tarefa `runDistributionScript` é projetada para executar a aplicação usando os scripts de distribuição gerados pelo Gradle. <br>
 Ela determina o sistema operativo para escolher o script apropriado a ser executado, garante que a aplicação esteja instalada antes de tentar executá-la e imprime na consola o comando que será executado.
 
-![Imagem11_2](img/11_2.png)
+Execução da task `./gradlew runDistributionScript`
 
-**Resultado:**
+![Imagem14_2](img/14_2.png)
 
-![Imagem11_3](img/11_3.png)
+**Resultado:**<br>
 
-Por fim foi feito o devido commit e o merge da branch. <br>
-E adicionada a respetiva tag.
-
-![Imagem12](img/12.png)
+![Imagem14_3](img/14_3.png)
 
 ### 5º Passo - Task do Javadoc
-**Objetivo:** Criar uma tarefa personalizada que dependa da tarefa *javadoc*, a qual gera a Javadoc para o teu projeto, e depois empacota a documentação gerada num ficheiro zip.
+**Objetivo:**<br>
+Criar uma tarefa personalizada que dependa da tarefa javadoc, a qual gera a Javadoc para o teu projeto, e depois empacota a documentação gerada num ficheiro zip.
 
-**Resolução:** <br>
-Como primeiro ponto foi criada uma branch e issue para trabalhar neste passo, para isso foram feitos os comandos:
+**Resolução:**<br>
+Como primeiro ponto foi criada uma branch, tag e issue para trabalhar neste passo, para isso foram feitos os comandos:
 
-    git checkout -b "javadoc"
+**Branch**
 
-![Imagem11_1](img/12_2.png)
+    git branch "javadoc"
 
-**Resultado:**
+**Tag**
+
+    git tag ca2-1.4.0
+
+**Issue** <br>
+
+![Imagem15_1](img/15_1.png)
+
+Em seguida foi criado o código para a Task.
+
+    task runJavadoc(type: Zip) {
+        group = "Javadoc"
+        description = "Creates Javadoc and puts it in a ZIP archive."
+
+        dependsOn javadoc
+
+        from javadoc.destinationDir
+
+        destinationDirectory = file("$rootDir/app")
+
+        archiveFileName = "javadoc.zip"
+
+        doLast {
+            println "Javadoc successfully created and saved as $destinationDirectory/javadoc.zip"
+        }
+    }
+
+Este código define uma task chamada `runJavadoc`, que cria a documentação do Javadoc e a coloca num arquivo ZIP. <br>
+A task pertence ao grupo "Javadoc" e tem a descrição "Cria Javadoc e coloca em um arquivo ZIP". <br>
+Ela depende da execução da task javadoc, ou seja, antes de rodar essa task, a documentação Javadoc precisa ser gerada. <br>
+A task copia os arquivos da pasta onde o Javadoc foi gerado, cria um arquivo ZIP chamado javadoc.zip, e o guarda na pasta app no diretório raiz do projeto. <br>
+Após concluir, imprime uma mensagem informando que o Javadoc foi criado e guardado com sucesso.
+
+Execução da task `./gradlew javadoc`
+
+![Imagem15_2](img/15_2.png)
+
+**Resultado:**<br>
+
+![Imagem15_3](img/15_3.png)
 
 ### 6º Passo - Testes Integração
-**Objetivo:** Criar um novo conjunto de código-fonte para testes de integração.  
+**Objetivo:**<br>
+Criar um novo conjunto de código-fonte para testes de integração.  
  - Adiciona um teste simples e as dependências e tarefas necessárias para executar o teste.
 
-<br><br><br>
+**Resolução:**<br>
+Como primeiro ponto foi criada uma tag e issue para trabalhar neste passo, para isso foram feitos os comandos:
+
+**Tag**
+
+    git tag ca2-1.5.0
+
+**Issue** <br>
+
+![Imagem16_1](img/16_1.png)
+
+Após isso adicionamos as dependências necessárias para garantir que não haverá problemas na execução dos testes.
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+TEXTO
+
+    testing {
+        suites {
+            // Configure the built-in test suite
+            test {
+                // Use JUnit4 test framework
+                useJUnit('4.13.2')
+            }
+        }
+    }
+
+
+**Resultado:**<br>
+
+![Imagem16_3](img/16_3.png)
 
 # Alternativas
 
@@ -356,3 +509,6 @@ Bazel é uma ferramenta de build desenvolvida pelo Google, projetada para alta p
 ## Conclusão
 
 Em resumo, o **Gradle** é a opção mais moderna, com excelente performance e flexibilidade, ideal para projetos complexos como Android. Já o **Maven** é mais simples de usar e segue convenções padronizadas, sendo ótimo para projetos Java tradicionais, mas com menos flexibilidade. O **Ant** oferece total controle sobre o build, mas exige muita configuração manual, tornando-se menos eficiente em comparação com as outras ferramentas. Por fim, o **Bazel** é o mais rápido e escalável, perfeito para projetos gigantescos e multiplataforma, mas sua complexidade o torna menos adequado para projetos menores.
+
+# Implementação do ANT
+
