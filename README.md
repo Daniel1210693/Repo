@@ -72,6 +72,7 @@ Neste passo desenvolvemos o seguinte código para conseguir executar o servidor.
     task runServer(type:JavaExec, dependsOn: classes) {
         group = "DevOps"
         description = "Launches chat server on 59001 port"
+
         classpath = sourceSets.main.runtimeClasspath
         mainClass = 'basic_demo.ChatServerApp'
         args '59001' 
@@ -103,7 +104,7 @@ Dentro do diretório Part1/gradle_basic_demo/src criamos o ficheiro AppTest.java
     mkdir test/java/basic_demo
     nano AppTest.java
 
-Codigo para 
+Codigo para os testes unitários:
 
     package basic_demo;
     import static org.junit.Assert.assertNotNull;
@@ -147,7 +148,7 @@ Para além da task para cirar o backup, criamos tambem uma task para apagar o ba
         delete 'backup' 
     }
 
-Execução da task ./gradlew backupSources
+Execução da task `./gradlew backupSources`
 
 ![Imagem7_1](img/7_1.png)
 
@@ -182,7 +183,7 @@ Para além da task para cirar o zip, criamos tambem uma task para apagar o zip.
         delete file('backup/zipfile.zip')
     }   
 
-Execução da task ./gradlew createZip
+Execução da task `./gradlew createZip`
 
 ![Imagem8_1](img/8_1.png)
 
@@ -437,22 +438,20 @@ Após isso adicionamos as dependências necessárias para garantir que não have
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-TEXTO
+**Resultado:**<br>
 
-    testing {
-        suites {
-            // Configure the built-in test suite
-            test {
-                // Use JUnit4 test framework
-                useJUnit('4.13.2')
-            }
-        }
-    }
+![Imagem16_2](img/16_2.png)
 
+### 7º Passo - Tag Final
+**Objetivo:**<br>
+No final da tarefa, marca o teu commit com a tag **ca2-part2**.
+
+**Resolução:**<br>
+Por fim para concluir a segunda parte do projeto, criamos a última tag.
 
 **Resultado:**<br>
 
-![Imagem16_3](img/16_3.png)
+![Imagem17_1](img/17_1.png)
 
 # Alternativas
 
@@ -512,3 +511,61 @@ Em resumo, o **Gradle** é a opção mais moderna, com excelente performance e f
 
 # Implementação do ANT
 
+## 1º Passo - Instalação do ANT
+
+### Fazer o download do ANT 1.10.15
+    wget https://downloads.apache.org/ant/binaries/apache-ant-1.10.15-bin.tar.gz
+
+### Extrair o ficheiro
+
+    tar -xzvf apache-ant-1.10.15-bin.tar.gz
+
+### Mover o diretório do ANT
+
+    sudo mv apache-ant-1.10.15 /opt/ant
+
+### Configurar as variáveis de ambiente
+
+    nano ~/.bashrc
+
+    export ANT_HOME=/opt/ant
+    export PATH=$ANT_HOME/bin:$PATH
+
+### Aplicar as alterações
+
+    source ~/.bashrc
+
+### Verificar a instalação
+
+    ant -version
+
+![Imagemant3](img/ant3.png)
+
+## 2º Passo - Criação dos Ficheiros
+Após a instalação do ANT, fizemos a cópia da pasta src e criamos um ficheiro build.xml e ivy.xml
+
+### Ficheiro Build.xml
+Configuração do ficheiro Build.xml
+
+![Imagemant1](img/ant1.png)
+
+### Ficheiro Ivy.xml
+Configuração do ficheiro Ivy.xml
+
+![Imagemant2](img/ant2.png)
+
+## 3º Passo - Task Backup
+
+![Imagemant5](img/ant5.png)
+
+## 4º Passo - Task Copy
+
+![Imagemant6](img/ant6.png)
+
+## 4º Passo - Task Zip
+
+![Imagemant7](img/ant7.png)
+
+## 4º Passo - Task Javadoc
+
+![Imagemant8](img/ant8.png)
