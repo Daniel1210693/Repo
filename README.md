@@ -459,6 +459,8 @@ No final da tarefa, marca o teu commit com a tag **ca2-part2**.
 **Resolução:**<br>
 Por fim para concluir a segunda parte do projeto, criamos a última tag.
 
+    git tag ca2-part2
+
 **Resultado:**<br>
 
 ![Imagem17](img/17.png)
