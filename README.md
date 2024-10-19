@@ -197,10 +197,11 @@ Explicar por que não foi necessário fazer o download e instalar manualmente ve
 - No diretório raiz da aplicação, executa “gradle –q javaToolchain” e explica o resultado.
 
 **Resolução:**<br>
+# FAZER
+
+
 **Resultado:**<br>
 ![Imagem9](img/9.png)
-
-# FAZER
 
 ### 10º Passo - Tag Final
 **Objetivo:**<br>
@@ -255,14 +256,16 @@ Certifica-te de que todas as dependências e plugins necessários estão adicion
  - Utiliza o teu navegador em [http://localhost:8080/employees](http://localhost:8080/employees).
 
 **Resolução:**<br>
-
+Neste passo adicionamos os seguintes plugins e dependências
 # FAZER
-
-**Resultado:**<br>
 
 Execução da task `./gradlew bootRun`
 
 ![Imagem12_1](img/12_1.png)
+
+**Resultado:**<br>
+
+![Imagem12_2](img/12_2.png)
 
 ### 3º Passo - Task de Zipar e Armazenar no Directório Backup
 **Objetivo:**<br>
@@ -458,7 +461,7 @@ Por fim para concluir a segunda parte do projeto, criamos a última tag.
 
 **Resultado:**<br>
 
-![Imagem17_1](img/17_1.png)
+![Imagem17](img/17.png)
 
 # Alternativas
 
