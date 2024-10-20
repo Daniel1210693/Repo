@@ -437,7 +437,11 @@ Criar um novo conjunto de código-fonte para testes de integração.
  - Adiciona um teste simples e as dependências e tarefas necessárias para executar o teste.
 
 **Resolução:**<br>
-Como primeiro ponto foi criada o issue para trabalhar neste passo, para isso foram feitos os comandos:
+Como primeiro ponto foi criada uma tag e issue para trabalhar neste passo, para isso foram feitos os comandos:
+
+**Tag**
+
+    git tag ca2-1.5.0
 
 **Issue** <br>
 
