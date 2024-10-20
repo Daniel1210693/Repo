@@ -497,7 +497,7 @@ Maven é uma ferramenta de build baseada em XML que segue convenções padroniza
 
 ### Desvantagens: 
  - Mais lento
- - XML verboso
+ - XML complexo
  - Menos flexível que o Gradle
 
 ## Ant:
@@ -509,7 +509,7 @@ Ant é uma ferramenta de build altamente flexível e configurável, que oferece 
 
 ### Desvantagens: 
  - Requer muita configuração manual
- - Não tem gerenciamento nativo de dependências
+ - Não tem gestão nativa de dependências
  - Tende a ser mais lento
 
 ## Bazel:
@@ -529,7 +529,7 @@ Bazel é uma ferramenta de build desenvolvida pelo Google, projetada para alta p
 Em resumo, o **Gradle** é a opção mais moderna, com excelente performance e flexibilidade, ideal para projetos complexos como Android. <br>
 Já o **Maven** é mais simples de usar e segue convenções padronizadas, sendo ótimo para projetos Java tradicionais, mas com menos flexibilidade. <br> 
 O **Ant** oferece total controle sobre o build, mas exige muita configuração manual, tornando-se menos eficiente em comparação com as outras ferramentas. <br> 
-Por fim, o **Bazel** é o mais rápido e escalável, perfeito para projetos gigantescos e multiplataforma, mas sua complexidade o torna menos adequado para projetos menores.
+Por fim, o **Bazel** é o mais rápido e escalável, perfeito para projetos gigantescos e multiplataforma, mas a sua complexidade torna-o menos adequado para projetos menores.
 
 # Implementação do ANT
 
