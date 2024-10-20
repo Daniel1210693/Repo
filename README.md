@@ -480,11 +480,11 @@ Gradle é uma ferramenta moderna de automação de builds baseada em Groovy ou K
  - Ideal para grandes projetos como Android
 
 ### Desvantagens: 
- - Curva de aprendizado mais alta
- - Documentação pode ter aspetos confusa
+ - Curva de aprendizagem mais alta
+ - Documentação pode ser mais confusa
 
 ## Maven:
-Maven é uma ferramenta de build baseada em XML que segue convenções padronizadas, amplamente usada no ecossistema Java para gerenciamento de dependências e automação de builds.
+Maven é uma ferramenta de build baseada em XML que segue convenções padronizadas, amplamente usada no ecossistema Java para gerir dependências e automação de builds.
 
 ### Vantagens: 
  - Fácil de usar
