@@ -215,6 +215,10 @@ Após instalarmos o gradle já obtivemos detalhes das versões do Java.
 
 ![Imagem9_2](img/9_2.png)
 
+Se em vez de utilizarmos o comando `gradle -q javaToolchain` usarmos o comando `./gradlew -q javaToolchain` já conseguimos obter o mesmo output sem necessitarmos de fazer alguma instalação.
+
+![Imagem9_3](img/9_3.png)
+
 ### 10º Passo - Tag Final
 **Objetivo:**<br>
 No final da tarefa, marca o teu commit com a tag **ca2-part1**.
