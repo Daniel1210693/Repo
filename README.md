@@ -471,7 +471,7 @@ Por fim para concluir a segunda parte do projeto, criamos a última tag.
 # Alternativas
 
 ## Gradle <br><br> Descrição:
-Gradle é uma ferramenta moderna de automação de builds que usa uma DSL flexível baseada em Groovy ou Kotlin, focada em performance com suporte a builds incrementais e caching.
+Gradle é uma ferramenta moderna de automação de builds baseada em Groovy ou Kotlin, focada em performance com suporte a builds incrementais e caching.
 
 ### Vantagens: 
  - Rápido
