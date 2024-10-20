@@ -297,22 +297,22 @@ Como primeiro ponto foi criada uma branch, tag e issue para trabalhar neste pass
 Em seguida foi feito o seguinte código para criar o Backup:
 
     task backupProject(type: Zip) {
-    group = "Backup"
-    description = "Zips the code into a backup"
-
-    from 'src'
-    include '*/'
-
-    destinationDirectory = file("backups")
-
-    archiveFileName = "source-backup-${new Date().format('yyyy-MM-dd_HH-mm-ss')}.zip"
-
-    doFirst {
-        println "Zipping the source code..."
-        delete file("backups")
-        mkdir file("backups")
+        group = "Backup"
+        description = "Zips the code into a backup"
+    
+        from 'src'
+        include '*/'
+    
+        destinationDirectory = file("backups")
+    
+        archiveFileName = "source-backup-${new Date().format('yyyy-MM-dd_HH-mm-ss')}.zip"
+    
+        doFirst {
+            println "Zipping the source code..."
+            delete file("backups")
+            mkdir file("backups")
+        }
     }
-}
 
 Esta tarefa do Gradle é projetada para compactar o código fonte localizado no diretório src, armazená-lo em um diretório de backup chamado backups, e nomear o arquivo ZIP de acordo com a data e hora atuais. <br>
 Antes de compactar, ele limpa o diretório de backup anterior e cria um novo (doFirst), e ao final, informa que o backup foi realizado com sucesso (doLast).
