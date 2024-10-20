@@ -224,7 +224,6 @@ Por fim para concluir a primeira parte do projeto, criamos a última tag.
 
     git tag ca2-part1
     git push origin ca2-part1
-    git fetch -tags
 
 **Resultado:**<br>
 
