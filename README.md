@@ -45,7 +45,7 @@ Optamos por utilizar a interface do GitHub para criamos os issue de uma forma ma
 
 ![Imagem3_1](img/3_1.png)
 
->**Nota:** À medida que fomos desenvolvendo o nosso projeto, fomos criando issue que se adequavam aos problemas que fomos encontrando. Nem sempre foram descritos ao longo do relatrório
+>**Nota:** À medida que fomos desenvolvendo o nosso projeto, fomos criando issue que se adequavam aos problemas que fomos encontrando. Nem sempre foram descritos ao longo do relatório.
 
 ### 4º Passo - Criação de Tag CA2-1.1.0
 **Objetivo:**<br>
@@ -104,7 +104,7 @@ Dentro do diretório Part1/gradle_basic_demo/src criamos o ficheiro AppTest.java
     mkdir test/java/basic_demo
     nano AppTest.java
 
-Codigo para os testes unitários:
+Código para os testes unitários:
 
     package basic_demo;
     import static org.junit.Assert.assertNotNull;
@@ -142,7 +142,7 @@ Para resolver este objetivo, criamos o seguinte código:
 Este código define uma tarefa chamada `backupSources` para realizar o backup dos arquivos de código da aplicação. <br> 
 A tarefa pertence ao grupo "DevOps", com a descrição "Backup das fontes da aplicação". Ela copia os arquivos da pasta src para a pasta backup/.
 
-Para além da task para cirar o backup, criamos tambem uma task para apagar o backup.
+Para além da task para criar o backup, criámos também  uma task para apagar o backup.
 
     task deleteBackup(type: Delete) {
         delete 'backup' 
@@ -177,7 +177,7 @@ Este código define uma task chamada `createZip`, que cria um arquivo ZIP conten
 A task pertence ao grupo "DevOps" e tem a descrição "Arquivo zip das fontes da aplicação". <br>
 Ela pega nos arquivos da pasta src, cria um arquivo ZIP chamado zipfile.zip e guarda-o na pasta backup/.
 
-Para além da task para cirar o zip, criamos tambem uma task para apagar o zip.
+Para além da task para criar o zip, criámos também uma task para apagar o zip.
 
     task deleteZip(type: Delete) {
         delete file('backup/zipfile.zip')
@@ -197,11 +197,23 @@ Explicar por que não foi necessário fazer o download e instalar manualmente ve
 - No diretório raiz da aplicação, executa “gradle –q javaToolchain” e explica o resultado.
 
 **Resolução:**<br>
-# FAZER
+Não houve necessidade de efectuar o download e instalar manualmente versões específicas do Gradle e JDK, porque o projeto usa as ferramentas do Gradle Wrapper e Java Toolchain. <br>
 
+**Gradle Wrapper**: Quando executamos o comando `./gradlew` (o script Gradle Wrapper), ele faz o download automaticamente da versão correta do Gradle, caso ainda não esteja instalada no computador. Isto garante que a mesma versão do Gradle seja sempre usada, evitando problemas de compatibilidade. <br>
+
+**Java Toolchain**: O Java Toolchain no Gradle permite definir a versão do Java necessária para compilar, testar e executar o projeto, mesmo que a versão do JDK não esteja instalada localmente. O Gradle faz o download e utiliza automaticamente a versão apropriada do JDK se ela não estiver disponível.
 
 **Resultado:**<br>
-![Imagem9](img/9.png)
+
+Ao executar o comando `gradle -q javaToolchain`, o Gradle exibe os detalhes do conjunto de ferramentas do Java utilizado, incluindo a versão do JDK usada.
+
+![Imagem9_1](img/9_1.png)
+
+Neste caso como ainda não tinhamos o gradle instalado, não encontrou o comando. 
+
+Após instalarmos o gradle já obtivemos detalhes das versões do Java.
+
+![Imagem9_2](img/9_2.png)
 
 ### 10º Passo - Tag Final
 **Objetivo:**<br>
@@ -226,11 +238,11 @@ Num diretório vazio, utiliza o comando *gradle init* para criar um projeto Grad
  - Substitui a pasta *src* pela da aplicação "Building REST services with Spring".
 
 **Resolução:**<br>
-Para resolver este objetivo criamos um directorio vazio chamado Part2 dentro da pasta CA2
+Para resolver este objetivo criamos um diretório vazio chamado Part2 dentro da pasta CA2
 
     mkdir Part2
 
-Dentro desse directorio executamos o comando
+Dentro desse diretório executamos o comando
 
     gradle init
 
@@ -255,10 +267,6 @@ Certifica-te de que todas as dependências e plugins necessários estão adicion
  - Compila e executa a aplicação com `./gradlew bootRun`.  
  - Utiliza o teu navegador em [http://localhost:8080/employees](http://localhost:8080/employees).
 
-**Resolução:**<br>
-Neste passo adicionamos os seguintes plugins e dependências
-# FAZER
-
 Execução da task `./gradlew bootRun`
 
 ![Imagem12_1](img/12_1.png)
@@ -267,7 +275,7 @@ Execução da task `./gradlew bootRun`
 
 ![Imagem12_2](img/12_2.png)
 
-### 3º Passo - Task de Zipar e Armazenar no Directório Backup
+### 3º Passo - Task de Zipar e Armazenar no Diretório Backup
 **Objetivo:**<br>
 Criar uma tarefa personalizada que comprime (em formato zip) todo o código-fonte do projeto e o armazena num diretório de backup.
 - Esta tarefa deve tratar tanto da cópia como da compressão do código-fonte, garantindo um processo de backup limpo.
@@ -478,7 +486,7 @@ Gradle é uma ferramenta moderna de automação de builds que usa uma DSL flexí
 
 ### Desvantagens: 
  - Curva de aprendizado mais alta
- - Documentação pode ter aspectos confusa
+ - Documentação pode ter aspetos confusa
 
 ## Maven:
 Maven é uma ferramenta de build baseada em XML que segue convenções padronizadas, amplamente usada no ecossistema Java para gerenciamento de dependências e automação de builds.
@@ -579,10 +587,10 @@ Configuração do ficheiro Ivy.xml
 
 ![Imagemant6](img/ant6.png)
 
-## 4º Passo - Task Zip
+## 5º Passo - Task Zip
 
 ![Imagemant7](img/ant7.png)
 
-## 4º Passo - Task Javadoc
+## 6º Passo - Task Javadoc
 
 ![Imagemant8](img/ant8.png)
